@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: xp-link-diagnosis-boot
+  profiles:
+    active: local
+server:
+  port: 8081
