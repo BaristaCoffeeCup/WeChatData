@@ -1,13 +1,12 @@
 package com.wanghy.wechatdata.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.wanghy.wechatdata.vo.TodoVO;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/test")
+@CrossOrigin
 public class ApiTestController {
 
     @GetMapping("/str-test")
@@ -16,6 +15,11 @@ public class ApiTestController {
         res.put("code",200);
         res.put("name",name);
         return res;
+    }
+
+    @GetMapping("/todo")
+    public TodoVO getTodo(){
+        return TodoVO.builder().id(0).name("Http测试").state(false).build();
     }
 
 }
