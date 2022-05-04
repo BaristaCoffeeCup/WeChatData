@@ -56,7 +56,7 @@ public class WebLogAspect {
         long startTime = System.currentTimeMillis();
         Object result = proceedingJoinPoint.proceed();
         // 打印出参
-        logger.info("Response Args  : {}", JSON.parseObject(JSON.toJSONString(result)));
+        logger.info("Response Args  : {}", JSON.toJSONString(result));
         // 执行耗时
         logger.info("Time-Consuming : {} ms", System.currentTimeMillis() - startTime);
         return result;

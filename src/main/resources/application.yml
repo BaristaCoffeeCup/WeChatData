@@ -1,6 +1,6 @@
 spring:
   application:
-    name: xp-link-diagnosis-boot
+    name: wechatdata
   profiles:
     active: local
 server:
